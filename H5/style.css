@@ -1,0 +1,533 @@
+/*
+Theme Name: 	Athena's Web
+Theme URI: 		
+Description: 	Theme for AthenasWeb.com an online Astrology publication and blog by Don Cerow,
+				designed & developed by Leon Gaban
+				http://leongaban.com @leongaban @LaunchGorilla
+Version: 		2.0
+Author: 		Leon Gaban
+Author URI: 	http://leongaban.com
+Tags: 			athena, astrology, clean, html5
+
+
+	Athena's Web v2.0
+	http://athenasweb.com
+
+	This theme was lovingly designed and developed by Leon Gaban, 
+	who blogs at thelifeleveler.com and designs at launchgorilla.com and leongaban.com
+
+*/
+
+
+/* RESET v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+Athena Web's Master Stylesheet ------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+
+/*=========================
+CONTENTS:
+
+00 Defaults
+01 Wrappers
+02 Nav
+03 Header Banner
+04 Home Page
+
+05 2 Column
+
+06 About Page
+07 Column
+08 Book Page
+09 Events
+10 Services
+11 Contact
+12 Archives
+13 Newsletter Form
+14 Footer
+15 Fixers
+XX Print Styles
+===========================
+
+	COLORS
+	Blue   : #4098db;  Twitter Blue : #00aced;  Facebook Blue : #064771;  Default Blue : #000ff2;
+	Green  : #25c75c;
+	Orange : #ff8427;
+	Red    : #cc0033;
+	Gray   : #b0b0b0;
+	Dark   : #212121;
+
+
+------------------------------------------------------------------------------------------------------------- 
+00 Defaults -------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+.blue_copy_link 		{ padding: 4px 2px; color: #4098db; }
+.blue_copy_link:hover,
+.blue_big_link:hover	{ text-decoration: none; color: #fff; background: #4098db; }
+.blue_big_link 			{ padding: 4px 2px; margin-right: 20px; font-size: 22px; font-weight: bold; color: #4098db }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01 Wrappers -------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+body					{ width: 100%; margin: 0 auto; background-image:url('images/clouds.jpg'); background-repeat:repeat; }
+.wrapper_bg				{ position: absolute; width: 100%; height: 350px; background-image:url('images/bg_tile.gif'); background-repeat:repeat-x; }
+.space_stretch_bg		{ position: absolute; top: 100px; min-width: 1000px; width: 100%; height: 250px; background-image:url('images/space_banner_big.jpg'); background-repeat:repeat-x; background-position:center; }
+.container1000 			{ position: relative; width: 1000px; top: -100px; margin: auto; }
+#content_container 		{ position: absolute; overflow: hidden; top: 350px; padding: 20px; background: #fff; box-shadow: 3px 6px 20px 0 #888888; }
+#content_container,
+.two_col_layout, 
+#blog_content, 
+#contact_content,
+#archives_content 
+						{ width: 960px; margin-bottom: 10px; }
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+02 Nav ------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+#nav_bar 				{ display: block; height:100px; margin:0 auto; padding:0; background:#fff; overflow: hidden; }
+.nav 					{ width:100%; margin:0 auto; padding:0; background:#fff; }
+.nav ul 				{ padding:0; margin:0; }
+.nav li 				{ float: left; margin: 0; list-style-type:none; font-family: 'Raleway', sans-serif;font-weight: 700; line-height: 100px; color: #fff; cursor: pointer; -webkit-transition: background .5s; -moz-transition: background .5s; -ms-transition: background .5s; transition: background .5s}
+.nav_btn a 				{ padding: 50px 20px 50px 20px; width: 100%; height: 100px; color: #3f9dda; text-decoration: none; text-shadow: 0px 1px 0px white; cursor: pointer; -webkit-transition: color .5s; -moz-transition: color .5s; -ms-transition: color .5s; transition: color .5s;}
+.nav li a:hover 		{ color: #fff; text-shadow: 0 -1px 0 #333; background: #4098db; cursor: pointer }
+.nav li .search:hover 	{ background:#fff }
+/*.nav .selected a 		{ color: #fff; background: #4098db; text-shadow: 0 -1px 0 #333; }*/ /* FIX */
+
+.search 				{ float:left; margin: 0 0 0 60px; line-height: 100px; }
+.search input 			{
+	width: 160px;
+	height: 28px;
+	padding-left: 20px;
+	padding-top: 2px;
+	margin-left: 100px;
+	color: #ccc;
+	border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top-left-radius :5px;
+    border-bottom-left-radius :5px;
+
+	-webkit-box-shadow: 
+     inset 0 0 4px rgba(0,0,0,0.1),
+           0 0 8px rgba(0,0,0,0.1);
+    -moz-box-shadow: 
+     inset 0 0 4px rgba(0,0,0,0.1),
+           0 0 8px rgba(0,0,0,0.1); 
+    box-shadow: 
+     inset 0 0 4px rgba(0,0,0,0.1),
+           0 0 8px rgba(0,0,0,0.1);
+}
+.search input:focus { 
+	outline: 1; 
+	color:#333;
+	border-top:1px solid #ff8427;
+    border-left:1px solid #ff8427;
+    border-bottom:1px solid #ff8427;
+    border-right:1px solid #ff8427;
+}
+.search_btn {
+	width: 77px;
+	height: 30px;
+	padding-left: 20px;
+	float: left;
+	padding: 0;
+	margin: 0;
+	line-height: 100px;
+	background-image:url('images/bg_go.png');
+	background-repeat:repeat-x;
+	background-position: -1px 35px;
+}
+.search_go {
+	position: relative;
+	float: right;
+	width: 77px;
+	margin-top: 34px;
+	height: 30px;
+	line-height: 30px;
+	font-family: 'Ruda', sans-serif;
+	font-weight: 900;
+	text-align: center;
+	color: white;
+	border-radius: 0px 5px 5px 0px; 
+	-moz-border-radius: 0px 5px 5px 0px; 
+	-webkit-border-radius: 0px 5px 5px 0px;
+
+	background: #4098db; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4098db 0%, #39a9d7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4098db), color-stop(100%, #39a9d7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #4098db 0%, #39a9d7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #4098db 0%, #39a9d7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #4098db 0%, #39a9d7 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #4098db 0%, #39a9d7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4098db', endColorstr='#39a9d7',GradientType=0 ); /* IE6-9 */
+
+	border: 1px solid #3A8AC6;
+}
+.search_go:hover {
+	color: white;
+	background: #d6693e;
+	background: -moz-linear-gradient(top,  #d6693e 0%, #ff9649 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6693e), color-stop(100%,#ff9649)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d6693e 0%,#ff9649 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d6693e 0%,#ff9649 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d6693e 0%,#ff9649 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #d6693e 0%,#ff9649 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4098db', endColorstr='#39a9d7',GradientType=0 ); /* IE6-9 */
+
+	-moz-box-shadow:    inset 0 0 10px #fff;
+	-webkit-box-shadow: inset 0 0 10px #fff;
+	box-shadow:         inset 0 0 10px #fff;
+
+	/*border: 1px solid #ccc;*/
+	border-color: #ccc;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+03 Header Banner & Social Media -----------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+#banner 			{ position: absolute; width: 1000px; height: 250px; margin-bottom: 400px; background:url('images/space_banner.png'); overflow: hidden; }
+#banner .logo 		{ float: left; width: 353px;}
+#banner .logo img 	{ position: relative; top: -35px; left: 0px; }
+#banner .logo h1 	{ position: relative; top: 30px; left: 35px; font-family: 'Raleway', sans-serif; line-height: 24px; font-size: 48px; font-weight: 900; color: #fff; }
+#banner .logo h2 	{ position: relative; top: 44px; left: 35px; font-family: 'Raleway', sans-serif; line-height: 14px; font-size: 18px; font-weight: 700; color: #4098db; }
+
+#social_media 		{ float: right; width: auto; padding: 40px 20px;}
+#social_icons ul 	{ padding:0; margin:0; }
+#social_icons .mail_chimp { padding-left: 55px; }
+
+.social_li 			{ list-style-type:none; font-family: 'Raleway', sans-serif; line-height: 32px; font-size: 16px; font-weight: 700; cursor: pointer; }
+.social_li a 		{ color:#4098db; }
+.social_li a:hover 	{ color:#fff; }
+.social_li p 		{ float: right; text-align: left; }
+
+.ico_newsletter img,
+.ico_facebook img,
+.ico_twitter img,
+.ico_contact img,
+.ico_rss img {
+	margin-right: 20px;
+	width: 35px;
+	height: 35px;
+	background: #cc0033;
+	border-radius: 50%;
+	background-position:top center;
+}
+.ico_newsletter img { background: #cc0033; }
+.ico_facebook img 	{ background: #064771; }
+.ico_twitter img 	{ background: #00aced; }
+.ico_contact img 	{ background: #d55336; }
+.ico_rss img 	    { background: #ff8427; }
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+04 Home Page ------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+#event_banner {
+	padding: 20px 0 0 20px;
+	overflow: hidden;
+	width: 940px;
+	height: 200px;
+	font-family: 'Raleway', sans-serif;
+	border: 1px dashed #4098db;
+  	background-repeat: no-repeat;
+	background-image: url('images/banner_owl.jpg');
+}
+
+#event_banner h1 { margin-bottom: 10px; }
+
+#event_home_description a:hover,
+#event_home_description span a:hover { color: #fff; background: #4098db; }
+
+.footer_subscribe_input {
+	margin-bottom: 5px;
+	padding: 0 10px;
+	width: 300px;
+	height: 25px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+#mc-embedded-subscribe {
+	padding: 0 10px;
+	height: 30px;
+	color: #fff;
+	border-radius: 4px;
+	border: 1px solid #fff;
+	background: #4098db;
+	cursor: pointer;
+}
+
+#home_blocks 			{ position: relative; margin-top: 20px; list-style: none; }
+#home_blocks li 		{ position: relative; display: block; float: left; margin: 0 15px 20px 0; width: 310px; height: 401px; border-bottom: 1px solid #4098db; text-align: center; font-family: 'Raleway', sans-serif; font-size: 25px; font-weight: 900; background: #4098db; 
+/*opacity: 1.0; 
+filter:alpha(opacity=100); */
+-webkit-transition: background .2s; -moz-transition: background .2s; -ms-transition: background .2s; transition: background .2s; }
+#home_blocks a 			{ color: white; text-shadow: 0 1px 0 #666; }
+#home_blocks li:nth-child(3n) { margin: 0 0 20px 0; }
+#home_blocks li a 		{ -webkit-transition: color 1s; -moz-transition: color 1s; -ms-transition: color 1s; transition: color 1s; }
+#home_blocks a:hover 	{ color: #4098db; text-shadow: 0 1px 0 #ccc; cursor: pointer; }
+#home_blocks li:hover 	{ 
+	background: white; border-bottom: 1px dotted #4098db; 
+	/*opacity:0.95; filter:alpha(opacity=95); */
+}
+.block_title 			{ display: block; position: absolute; bottom: 0px; left: 0; padding:25px 0 20px 0; width: 310px; z-index: 999; }
+.blocks 				{ z-index: 1; }
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+05 2 Column -------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.two_col_layout {
+	/*min-height: 600px;*/
+	display: block;
+	margin-bottom: 60px;
+	font-family: Arial, sans-serif;  font-weight: 300;  line-height: 18px; font-size: 14px;
+}
+.two_col_layout h3 {
+	font-family: 'Raleway', sans-serif;
+	font-size:22px;
+	line-height: 26px;
+}
+
+.left_column, .right_column { display: block; float: left; padding: 0 20px; width: 440px; }
+.right_column { float: right; }
+.column_copy h2, #content_container h2 { font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 32px; text-transform: uppercase; color: #212121; line-height: 1; }
+.column_copy p 				{ margin-top: 20px; margin-bottom: 20px; font-family: Arial, sans-serif;  font-size: 14px; line-height: 22px; color: #212121; }
+.column_copy a 				{ padding: 4px 2px; color: #4098db; }
+.column_copy a:hover,
+.blue_big_link:hover 		{ text-decoration: none; color: #fff; background: #4098db; }
+.blue_big_link 				{ padding: 4px 2px; margin-right: 20px; font-size: 22px; font-weight: bold; color: #4098db; }
+.column_images img 			{ margin-bottom: 60px; border: 1px solid white; }
+.column_images img:hover 	{ margin-bottom: 60px; border: 1px dotted #4098db; }
+.wp-caption-text 			{ font-family: Tahoma, sans-serif; font-size: 10px; text-align: center; }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+06 About Page ------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+07 Column Page ------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.blog_column { float: left; width: 610px; margin-top: 20px; margin-bottom: 10px; }
+.blog_column article { margin-bottom: 60px; }
+.blog_social { width: 100%; height: 30px; margin-top: 10px; }
+.blog_social ul li { float:left; margin-right: 5px; list-style-type:none; }
+
+.blog_post { width: 610px; }
+.blog_post h1 { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 32px; letter-spacing:-1px }
+.blog_post h1 a { color: #4098db; }
+.blog_post h1 a:hover {	text-decoration: none; }
+
+.blog_post h2 { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 32px; line-height: 20px; letter-spacing:-1px }
+.blog_post h2 a { color: #4098db; }
+.blog_post h2 a:hover {	text-decoration: none; }
+.blog_post h4 { margin-top: 4px; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 12px; color: #666;}
+/*.blog_post img { margin: 5px 0 0 0; border: 1px dashed #fff; }
+.blog_post img:hover { border: 1px dotted #3A8AC6; }*/
+/*.blog_post p { margin-top: 10px; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; }*/
+.blog_post p { margin-top: 10px; margin-bottom: 10px; font-family: Georgia, serif; font-size: 16px; line-height: 22px; color:#464646; }
+.blog_post header p { margin: 0; font-size: 11px; font-style:italic; color: #666;}
+.blog_post p a { padding: 4px 2px; color: #4098db; }
+.blog_post p a:hover { text-decoration: none; color: #fff; background: #4098db; }
+.blog_post .read_more { margin-top: 20px }
+.blog_post .read_more a { padding: 10px; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 16px; color: #4098db; -webkit-transition: background .5s; -moz-transition: background .5s; -ms-transition: background .5s; transition: background .5s; }
+.blog_post .read_more a:hover { text-decoration: none; color: #fff; background: #4098db; }
+.blog_post section {  }
+
+aside { width: 330px;  }
+.blog_side_bar { display: block; float: right; padding: 0; margin: 40px 0 0 0; width: 330px; }
+
+.book_widget { width: 330px; height: 550px; border: 1px dashed #ccc; -webkit-transition: background .5s; -moz-transition: background .5s; -ms-transition: background .5s; transition: background .5s; }
+.book_widget img { z-index: 10; }
+.book_widget a { padding: 0; margin: 0; text-decoration: none; color: #000; -webkit-transition: color 1s; -moz-transition: color 1s; -ms-transition: color 1s; transition: color 1s; }
+.book_widget h3 { padding-top: 10px; margin-top: 10px; margin-bottom: 8px; font-family: 'Ruda', sans-serif; font-weight: 900; letter-spacing: -1px; font-size: 24px; text-align: center; z-index: 10000; }
+.book_widget h2 { padding: 10px; font-family: 'Ruda', sans-serif; font-weight: 900; font-size: 16px; text-align: center; z-index: 10000; }
+.book_widget h6 { text-align: right; padding-right: 20px; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 11px; z-index: 10000; }
+.book_widget:hover { color: #fff; background: #4098db; border: 1px dashed #4098db; cursor: pointer; }
+.mail_chimp_widget { width: 330px; height: 320px; margin: 30px 0; border: 1px dashed #ccc; }
+.facebook_widget { margin: 30px 0; }
+.moon_widget { margin: 30px 0; }
+
+#comments {
+	font-family: Georgia, serif;
+	font-size: 16px;
+	color:#666666;
+}
+#comments h3 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#book-talk {
+	margin-bottom: 20px;
+	padding: 20px 0;
+	text-align: center;
+	background: #398DD8;
+}
+
+#book-talk a {
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	color: #fff;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- 
+08 Book Page ------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+#book_content { margin-bottom: 20px; }
+.book_details { float: left; width: 960px; height: 100px; }
+.book_details h2 { margin-bottom: 5px; font-family: 'Raleway', sans-serif;  font-weight: 300;  font-size: 32px; }
+.book_details h3 { margin-bottom: 5px; font-family: 'Raleway', sans-serif;  font-weight: 300;  font-size: 24px; }
+.book_details h4 { margin-bottom: 5px; font-family: 'Raleway', sans-serif;  font-weight: 300;  font-size: 12px; }
+.book_img img { float: left; width: 410px; }
+.book_description { float: right; width: 530px; }
+.book_description p { margin-bottom: 15px; font-family: Arial, sans-serif;  font-size: 14px; line-height: 20px; }
+.book_page_download { display: block; margin-bottom: 40px; float: left; width: 960px; height: 480px; margin-top: 40px; text-align: center; }
+.download_bar_bg { padding: 10px; margin-bottom: 20px; text-shadow: 0 -1px 0 #fff; background: #f8f8f8; }
+.book_page_download h2 { margin-top: 20px; margin-bottom: 10px; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 32px; text-align: center; }
+.book_page_download h3 { margin-bottom: 20px; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 24px; text-align: center; }
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+09 Events ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/*.latest_event {
+	height: 260px;
+	background: #d5d5d5;
+}
+.events_logo {
+	float: left;
+	width: 310px;
+	height: 220px;
+	padding: 20px;
+	background: #2d2d2d;
+}
+.events_description {
+	float: right;
+	width: 560px;
+	padding: 20px;
+}
+.events_description h3, .events_description p {
+	font-family: Arial, sans-serif; color: #333;
+}
+.events_description h3 {
+	margin-bottom: 20px;
+	font-size: 32px;
+}
+.events_description p {
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+}*/
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+10 Services -------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+11 Contact --------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* Z-index of #mask must lower than #boxes .window */
+#mask { position: absolute; margin: 0 auto; width: 100%; height: 100%; z-index: 9000; background-color: #000; display:none; }
+#boxes .window { position:fixed; width: 520px; height: 500px; display: none; z-index: 9999; padding: 20px; }
+#boxes .window h3 { margin: 20px 0 20px 0; font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 32px; text-align: center; color: #333; }
+#boxes .window span a { position: relative; padding: 10px 15px; top: -125px; left: 480px; font-family: 'Ruda', sans-serif; font-weight: 900; font-size: 16px; text-decoration: none; color: #fff; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; background: #4098db; border: 1px solid #4098db; }
+#boxes .window span a:hover { background: #cc0033; border: 1px dashed #fff; } 
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog { width: 520px;  height: 500px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; background: #fff; }
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+12 Archives -------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+#archive_section {
+	width: 620px;
+	padding-top: 20px;
+}
+#archive_section header {
+	font-family: 'Raleway', sans-serif; font-weight: 700;
+	margin: 40px 0 10px 0;
+}
+#archive_section p {
+	font-weight: 300;
+}
+
+.archive_spacer { float:right; width: 30px; margin-bottom: 100px; }
+.category_title { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 46px; letter-spacing:-1px }
+
+/*#archive_section h1 { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 32px; letter-spacing:-1px }*/
+#archive_section h1 a { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 32px; letter-spacing:-1px; color: #4098db; }
+#archive_section h1 a:hover {	text-decoration: none; }
+#archive_section article { margin-top: 35px; }
+
+.posted_by { margin:8px 0 18px; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 11px; color: #333; }
+.tags { margin:8px 0; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 11px; color: #333; }
+.tags a { color: #4098db; }
+.excerpt { display:block; margin-bottom:14px; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 16px; line-height:20px; color: #000; }
+
+
+/* ---------------------------------------------------------------------------------------------------------- 
+13 News Letter Form -----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.event-newsletter-cta {
+	margin: 10px 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- 
+14 Footer ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+footer { display: block; width: 960px; height: 150px; padding-top: 60px; margin-top: 60px; color: #b0b0b0; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 16px; text-align: center; background: #000; background-image: url('images/dark_wall.png'); clear: both }
+footer span { display: block; margin-top: 8px; font-size: 13px; font-weight: 300 }
+
+.footer_icons { padding-left: 350px; margin-top: 20px; }
+.footer_icons .animate_icon img { float: left; margin-left: 10px; border: 3px solid #232323;
+	-webkit-transition: background .3s; -moz-transition: background .3s; -ms-transition: background .3s; transition: background .3s; }
+.footer_icons .animate_icon img { padding: 2px 1px 2px 1px; }
+.footer_icons .animate_icon img:hover { background-position: top center; border: 3px solid #fff; background: #666;
+	-webkit-transition: background 1s; -moz-transition: background 1s; -ms-transition: background 1s; transition: background 1s;
+	-webkit-transition: border .5s; -moz-transition: border .5s; -ms-transition: border .5s; transition: border .5s; }
+.footer_icons .humans_logo img { position: absolute; bottom left; padding: 0 0 0 45px; }
+.footer_icons .cc_logo img { position: absolute; bottom left; padding: 40px 0 0 45px; }
+
+/* ----------------------------------------------------------------------------------------------------------
+15 Fixers ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.alignleft 		{ float: left; }
+.alignright 	{ float: right; }
+.float-left 	{ float: left; }
+.float-right 	{ float: right }
+.alpha-50 		{ -moz-opacity:.50; -ms-filter:"alpha(opacity=50)"; filter:alpha(opacity=50); opacity:.50; }
+.clear 			{ clear:both; }
+.top-20 		{ margin-top: 20px; }
